@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mesterfogások</title>
+    <link rel="stylesheet" href="JavaScript.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Kód Magyarázat</h1>
+    </header>
+    <div class="explanation">
+        <p>Ez a rész JavaScript kódot tartalmaz, amely bemutatja a React Hooks használatát. A példa egy egyszerű számláló komponenst mutat be, amelyet React segítségével építettek. A komponens a <code>useState</code> hookot használja a számláló állapotának kezelésére. Amikor a gombra kattintanak, a számláló értéke eggyel növekszik.</p>
+        <p>Ezenkívül van JavaScript kód, amely kezeli a sima görgetést és az aktív osztály váltását az oldalsáv menü linkjeihez. Amikor egy oldalsáv linkre kattintanak, az oldal simán görget a megfelelő szakaszhoz, és az aktív osztály frissül, hogy kiemelje az aktuális szakaszt.</p>
+    </div>
+
+    <div class="main-content">
+        <div id="alapok" class="content-section">
+            <h2>JavaScript Alapok</h2>
+            <p>Ez a kód bemutatja a modern JavaScript szintaxist, amely egy felhasználót hoz létre egy névvel és életkorral. A felhasználó rendelkezik egy üdvözlő metódussal, amely kiírja a konzolra a felhasználó nevét. Az arrow function szintaxis használata egyszerűsíti a funkciók definiálását, és a template literals segítségével könnyen beilleszthetünk változókat a stringekbe.</p>
+            <div class="code-block">
+<pre>
+// Modern JavaScript szintaxis
+const createUser = (name, age) => ({
+    name,
+    age,
+    greet() {
+        console.log(`Hello, ${this.name}!`);
+    }
+});
+</pre>
+            </div>
+        </div>
+
+        <div id="adattipusok" class="content-section">
+            <h2>Adattípusok</h2>
+            <p>Ez a kód bemutatja a JavaScript primitív és összetett adattípusait. A primitív típusok közé tartoznak a számok, szövegek és logikai értékek, míg az összetett típusok közé tartoznak a tömbök és objektumok. A tömbök több értéket tárolnak egy változóban, míg az objektumok kulcs-érték párokat tartalmaznak.</p>
+            <div class="code-block">
+<pre>
+// Primitív és összetett típusok
+let number = 42;
+let text = "JavaScript";
+let isActive = true;
+
+const array = [1, 2, 3];
+const object = { key: "value" };
+</pre>
+            </div>
+        </div>
+
+        <div id="vezerlesek" class="content-section">
+            <h2>Vezérlési Szerkezetek</h2>
+            <p>Ez a kód bemutatja a JavaScript vezérlési szerkezeteket, beleértve az elágazásokat és ciklusokat. Az if-else szerkezet lehetővé teszi a feltételes logika végrehajtását, míg a forEach ciklus lehetővé teszi a tömb elemeinek iterálását és műveletek végrehajtását minden egyes elemre.</p>
+            <div class="code-block">
+<pre>
+// Elágazások és ciklusok
+if (condition) {
+    // Művelet
+} else {
+    // Alapértelmezett művelet
+}
+
+array.forEach(item => {
+    console.log(item);
+});
+</pre>
+            </div>
+        </div>
+
+        <div id="modulok" class="content-section">
+            <h2>Modulok</h2>
+            <p>Ez a kód bemutatja az ES6 modulok használatát. Egy funkciót exportálunk egy modulból, majd importáljuk azt egy másik fájlban. Az export és import kulcsszavak lehetővé teszik a kód újrafelhasználhatóságát és modularitását, ami segít a kód karbantarthatóságában és szervezésében.</p>
+            <div class="code-block">
+<pre>
+// ES6 Modulok
+export const myFunction = () => {
+    // Exportált funkció
+};
+
+import { myFunction } from './module.js';
+</pre>
+            </div>
+        </div>
+
+        <div id="objektumok" class="content-section">
+            <h2>Objektum Orientált Programozás</h2>
+            <p>Ez a kód egy egyszerű osztályt definiál, amely egy felhasználót reprezentál. Az osztály tartalmaz egy konstruktort, amely beállítja a felhasználó nevét, és egy metódust, amely kiírja a konzolra a felhasználó nevét. Az osztályok lehetővé teszik az objektumok létrehozását és a hozzájuk tartozó metódusok definiálását, ami segít a kód strukturálásában és újrafelhasználhatóságában.</p>
+            <div class="code-block">
+<pre>
+class User {
+    constructor(name) {
+        this.name = name;
+    }
+
+    sayHello() {
+        console.log(`Hello, ${this.name}`);
+    }
+}
+</pre>
+            </div>
+        </div>
+
+        <div id="technologiak" class="content-section">
+            <h2>Modern Technológiák</h2>
+            <p>Ez a kód egy egyszerű React komponenst mutat be, amely egy számlálót tartalmaz. A komponens a <code>useState</code> hookot használja a számláló állapotának kezelésére. Amikor a gombra kattintanak, a számláló értéke eggyel növekszik. A React egy népszerű JavaScript könyvtár, amely lehetővé teszi a felhasználói felületek komponens alapú fejlesztését.</p>
+            <div class="code-block">
+<pre>
+// React Hooks példa
+&lt;script type="text/babel"&gt;
+import React, { useState } from 'react';
+
+function Counter() {
+    const [count, setCount] = useState(0);
+    return (
+        &lt;div&gt;
+            &lt;button onClick={() => setCount(count + 1)}&gt;Click me&lt;/button&gt;
+            {count}
+        &lt;/div&gt;
+    );
+}
+
+ReactDOM.render(&lt;Counter /&gt;, document.getElementById('react-root'));
+&lt;/script&gt;
+</pre>
+                <div id="react-root"></div>
+            </div>
+        </div>
+
+        <div id="async" class="content-section">
+            <h2>Aszinkron JavaScript</h2>
+            <p>Ez a kód egy aszinkron függvényt mutat be, amely adatokat kér le egy API-ból. A függvény a <code>fetch</code> metódust használja az adatok lekérésére, és a <code>try...catch</code> blokkot a hibakezelésre. Az aszinkron JavaScript lehetővé teszi a nem blokkoló műveletek végrehajtását, ami javítja az alkalmazás teljesítményét és felhasználói élményét.</p>
+            <div class="code-block">
+<pre>
+// Aszinkron JavaScript példa
+async function fetchData() {
+    try {
+        const response = await fetch('https://api.example.com/data');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+fetchData();
+</pre>
+            </div>
+        </div>
+
+        <div id="dom" class="content-section">
+            <h2>DOM Manipuláció</h2>
+            <p>Ez a kód egy egyszerű DOM manipulációs példát mutat be. Amikor a gombra kattintanak, egy figyelmeztető üzenet jelenik meg. A DOM (Document Object Model) lehetővé teszi a HTML dokumentumok programozott módosítását és interakcióját a JavaScript segítségével.</p>
+            <div class="code-block">
+<pre>
+// DOM Manipuláció példa
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+        alert('Button clicked!');
+    });
+});
+</pre>
+            </div>
+        </div>
+
+        <div id="promises" class="content-section">
+            <h2>Promises</h2>
+            <p>Ez a kód bemutatja a JavaScript Promises használatát. A Promise egy objektum, amely egy aszinkron művelet végrehajtását képviseli, és lehetővé teszi a művelet sikeres vagy sikertelen befejezésének kezelését.</p>
+            <div class="code-block">
+<pre>
+// Promise példa
+const myPromise = new Promise((resolve, reject) => {
+    const success = true; // Állítsd be true-ra vagy false-ra a siker vagy hiba szimulálásához
+    if (success) {
+        resolve('A művelet sikeres volt!');
+    } else {
+        reject('A művelet sikertelen volt.');
+    }
+});
+
+myPromise
+    .then(result => {
+        console.log(result);
+    })
+    .catch(error => {
+        console.error(error);
+    });
+</pre>
+            </div>
+        </div>
+
+        <div id="async-await" class="content-section">
+            <h2>Async/Await</h2>
+            <p>Ez a kód bemutatja az async/await szintaxist, amely egyszerűsíti az aszinkron kód írását. Az async kulcsszó egy függvényt aszinkronná tesz, az await kulcsszó pedig megvárja egy Promise teljesülését.</p>
+            <div class="code-block">
+<pre>
+// Async/Await példa
+async function fetchData() {
+    try {
+        const response = await fetch('https://api.example.com/data');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+fetchData();
+</pre>
+            </div>
+        </div>
+
+        <div id="event-handling" class="content-section">
+            <h2>Eseménykezelés</h2>
+            <p>Ez a kód bemutatja az eseménykezelést JavaScript-ben. Az eseménykezelők lehetővé teszik a felhasználói interakciók kezelését, például kattintások, billentyűleütések és egyéb események figyelését.</p>
+            <div class="code-block">
+<pre>
+// Eseménykezelés példa
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+        alert('Button clicked!');
+    });
+});
+</pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
